@@ -10,3 +10,4 @@ function myFunction() {
   spreadsheet = SpreadsheetApp.openById(id);
   Logger.log(spreadsheet.getName());//はじめてのGAS
 }
+
