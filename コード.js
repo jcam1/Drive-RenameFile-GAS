@@ -1,7 +1,10 @@
 function myFunction() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  Logger.log(spreadsheet.getId()); //スプレッドシートID
-  Logger.log(spreadsheet.getName()); //はじめてのGAS
-  Logger.log(spreadsheet.getNumSheets()); //3
-  Logger.log(spreadsheet.getUrl()); //URL
+
+  var sheet = spreadsheet.getSheetByName('シート1');
+  Logger.log(sheet.getName()); //シート1
+
+  var sheets = spreadsheet.getSheets();
+  Logger.log(sheets[0].getName()); //シート1
+  Logger.log(sheets[1].getName()); //シート2
 }
